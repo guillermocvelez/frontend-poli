@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Eje Cafetero: Experiencias | VerantTravel</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header class="top-navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <div class="brand-logo">VerantTravel</div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="catalog.html" class="active">Destinos</a>
+                    <a href="about.html">Nosotros</a>
+                </nav>
+            </div>
+            
+            <div class="navbar-actions">
+                <div class="search-box">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Buscar experiencia..."/>
+                </div>
+                <button class="btn-login">Ingresar</button>
+                <button class="btn-register">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-container">
+            <span class="page-header-label">Eje Cafetero, Colombia</span>
+            <h1>El Corazón del Café.</h1>
+            <p>Siente la magia de las montañas andinas. Desde valles de palmas gigantes hasta el aroma de los mejores granos de café del mundo.</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-pills">
+                <button class="filter-pill active">Todas</button>
+                <button class="filter-pill">Senderismo</button>
+                <button class="filter-pill">Cultura</button>
+                <button class="filter-pill">Relax</button>
+                <button class="filter-pill">Aventura</button>
+            </div>
+            
+            <div class="filter-actions">
+                <div class="filter-select-wrapper">
+                    <span class="material-symbols-outlined">filter_list</span>
+                    <select class="filter-select">
+                        <option>Ordenar por</option>
+                        <option>Más populares</option>
+                        <option>Precio: Menor a Mayor</option>
+                        <option>Nuevos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="catalog-main">
+        <div class="catalog-grid">
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD273o8XZpFhZEKaKcyvl817hU81T5KHtCHtjHeLlAlkHQJb31CCE98izWi6B4ORVncrPDKWOwONCEi1KFUO0iolyYcBmMTig36BNQkMZCPi6DM6aTGASVphLclOnbYJj80i9OlK69TDeZWP0uGd0sAwjcQUrKId4TBzqoeQTjJ4Fp4aW3YamQTXY-nb-N_tj4pBsnkLenM1ldS12SxkKJn1gX19dnXLkHb8nDJJNxMEWhpK_I6z9U6OdQC1M7_201CSGVL0jsiSX2Y" alt="Palmas de cera en el Valle de Cocora"/>
+                    <div class="card-badge">DESTACADO</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Trekking Valle de Cocora</h3>
+                        <span class="card-price">$120 USD</span>
+                    </div>
+                    <p class="card-description">Camina entre las palmas de cera más altas del mundo. Una ruta escénica por el bosque de niebla y reserva natural Acaime.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">Día Completo</span>
+                        <a href="detail.html" class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQ4oGrK4e2ckknY1sCRDyPREjtVG9QFBwSkh1-orrPHQisipEWV3MNuf3mE7tIgo7pIQX5-QC2s5-65dmMTwOYGatPdyxCjauJdV_OHGY1wpcJsqyaso_EM-c3d4sKWfKYofxbiSLnojpwnTzF3x8m8UyxqYTbE_BP6WEm_TTj51qX8OBBfpIfo5FHEpW56Ou9skSsOohtWVUV9p6w4s-jaoD70ze3VTPVECokYW-mfn_MDRvRnIFXByvj-MvAo6XGwBRlbaNjYqC" alt="Calles coloridas de Salento"/>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Salento Colonial</h3>
+                        <span class="card-price">$45 USD</span>
+                    </div>
+                    <p class="card-description">Recorre la Calle Real, maravíllate con la arquitectura antioqueña y disfruta de la mejor vista desde el mirador de la cruz.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">4 Horas</span>
+                        <button class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAN3aJdmeF6vAkmIidmfw22JwTqsfe2WHR5zuL_mO-gdC0R_8O0FAhA81JgspQnt4KsN_n-rn6cvYFC7fLzUcf3u9A3d_bLZPMlB_q4wyjLFAOxNrvXaE_5AETq9z-dMnYjhpr7Tk1ieSf4mXjZP-MOemYh2Ky7m3aM9UCtAo7PPAVZ6irRgpaJRs2HLY1UodJePPY8Vy0GCzJzPW7aU2BwNi4V42z_Qmnt8NQEFJB9IILyDznNlAAkh1TVZs0LoNfRZ1NMWuC6yUE" alt="Proceso del café en hacienda tradicional"/>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Tour del Café Premium</h3>
+                        <span class="card-price">$75 USD</span>
+                    </div>
+                    <p class="card-description">Desde la semilla hasta la taza en una hacienda tradicional. Cata guiada por expertos baristas en fincas históricas.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">Medio Día</span>
+                        <button class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj8EawRl6Yzmhkn45Oo3-5ui-nZ-WvJHXb8fiqKL3hItOFAPSGhqjtYkGt5ylfdF4MnQ8UNDkADoVk8YueQitAjlypu9L4e5i3K2zqgX1aMFqJ1Z_tnWorR5KWLY49kiYV4PFNZUsLg4W5tSNtN79Yc2QJkXPfCGJ9A2z0Qz_PW4UcleMQicHv541486oJm1e24DNDEdf_elyChelnUMGhphUnW_3siW_Pd4pMIvlaZWMmnW5zm6jBiHgRR44KOVpdPlyQnhb7LdWD" alt="Termales de Santa Rosa de Cabal"/>
+                    <div class="card-badge">RELAX</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Termales Santa Rosa</h3>
+                        <span class="card-price">$90 USD</span>
+                    </div>
+                    <p class="card-description">Relájate en aguas termales naturales bajo una majestuosa caída de agua de 95 metros en un entorno selvático único.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">Noche Mágica</span>
+                        <button class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhsXNV2N6i4t5JI1JyWAG6gK4OfGBsPwUYGdy3AxaoTe84HMBwUvBhIU_FgtRNklG26ghLOflX9cgbRJvpNvB6usOhO9XkbpM87LwzvEenxGNyNCiu8jGK2XY8eZdHmdRBOHPCPWgqTfiwxWsCJbLpuLSXQc5PYMWwWWNs3BcAZuVM2C5P3VMf5BqGf33nM1ywx4sdihekUMupdfHdcoicGvlHB-oSTfR1bokhGjyISPYCWZ9IYFLNZFb7f9BbKyneH0UoKm1WiAKz" alt="Mirador Colina Iluminada en Filandia"/>
+                    <div class="card-badge">CULTURAL</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Filandia: Pueblo con Encanto</h3>
+                        <span class="card-price">$55 USD</span>
+                    </div>
+                    <p class="card-description">Descubre el pueblo más bello del Quindío. Visita talleres de cestería y sube al Mirador Colina Iluminada.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">Día Completo</span>
+                        <button class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn0z0Zatcod_sLUYH4pCFILqNZ0-BvatE9EdyiU9fGYhN9n7gH6DM4kGHrm-0Evpdk_jZSKmiGQzw8HWIET8sEi6ZNW6PoLAV0px15I8Pmfe0i7oYGrUiryuRJbgsPHzcke_UsC4zrplcWN-ILO47d70BwpSPGgNPiper4UZ4rAB6x9QOmSiLsCnQ3Z5Xt7l3MHIxF38thlinGgwumakuIPoI3_KpVJSngjDcxAbtNyu6lXX8QX7by87RqJLafI4jnan4tZ1-c-Q_X" alt="Páramo y nieve en el Nevado del Ruiz"/>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Ascenso al Nevado</h3>
+                        <span class="card-price">$180 USD</span>
+                    </div>
+                    <p class="card-description">Aventura de alta montaña hacia el Parque Nacional Natural Los Nevados. Paisajes de páramo y frailejones milenarios.</p>
+                    <div class="card-footer">
+                        <span class="card-duration">Aventura Extrema</span>
+                        <button class="btn-details">
+                            Ver detalles <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="pagination-section">
+        <button class="pagination-btn">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-title">VerantTravel</span>
+                <p>Conectando viajeros con la esencia más auténtica de Colombia y el mundo.</p>
+            </div>
+            
+            <nav class="footer-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Servicio</a>
+                <a href="#" class="footer-link-highlight">Sostenibilidad</a>
+                <a href="#">Contáctenos</a>
+                <a href="#">Trabaja con Nosotros</a>
+            </nav>
+            
+            <div class="footer-copyright">
+                © 2024 VerantTravel Eje Cafetero. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
