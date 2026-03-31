@@ -2961,3 +2961,57 @@ body.mobile-optimized {
         padding-bottom: 48px;
     }
 }
+
+.experience-card.is-hidden-js {
+    display: none;
+}
+
+.btn-save.is-favorite {
+    background-color: #e9f7eb;
+    border-color: #83c68d;
+    color: #154212;
+}
+
+.input-error {
+    border-color: #ba1a1a !important;
+    box-shadow: 0 0 0 2px rgba(186, 26, 26, 0.15);
+}
+
+.form-error {
+    margin-top: 6px;
+    color: #ba1a1a;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.js-toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    background-color: #1f2937;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.js-toast.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.js-toast.success {
+    background-color: #154212;
+}
+
+.js-toast.error {
+    background-color: #8f1010;
+}
+
+.js-toast.info {
+    background-color: #374151;
+}
