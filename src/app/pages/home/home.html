@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+<main class="mobile-optimized">
+    <!-- Hero Section (Responsive) -->
+    <section class="hero-section desktop-only">
+        <div class="hero-background">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwrbqTswOobELPz2GgkM3V-l_qQj8zVDN6P8QlUnp-SP_Shxj6EXp6Lg9Hktefkn_9GNdRv91U6xTHpQQ2i3d8mYIeecUosZsPYqmMhJNdCY_JNg4c3mkbaVnaPGMFoQKSNrGKTqVZ-mH1gChcAGzqgpGFqQ0_Vvk3qWXulusPBHNt0iN8C0yjgMP_Wd2Pf3HseYxa30DLDOYrg4Vzp-CmrK3tkYlIPhHszH1F1zQiVF8YgfSSVH_KyftK6uKBMhDijdJMSqT6Wny" alt="Coffee plantation">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Eje Cafetero, Colombia</span>
+                <h1>La esencia del <span class="mobile-hero-highlight">café</span>.</h1>
+                <p>Descubre paisajes declarados patrimonio de la humanidad. Una experiencia curada por Verant.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Explorar Experiencias</button>
+                    <button class="btn-secondary">Saber más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile-hero mobile-only">
+        <div class="mobile-hero-content">
+            <span class="mobile-hero-badge">Eje Cafetero, Colombia</span>
+            <h2 class="mobile-hero-title">La esencia del <span class="mobile-hero-highlight">café</span>.</h2>
+            <p class="mobile-hero-description">Descubre paisajes declarados patrimonio de la humanidad.</p>
+            <button class="mobile-hero-button">Explorar Experiencias</button>
+        </div>
+        <div class="mobile-hero-decoration"></div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section desktop-only">
+        <div class="search-card">
+            <div class="search-field">
+                <label>Ubicación</label>
+                <div class="input-group">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <input type="text" placeholder="¿A dónde quieres ir?">
+                </div>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-field">
+                <label>Actividad</label>
+                <div class="input-group">
+                    <span class="material-symbols-outlined">explore</span>
+                    <input type="text" placeholder="Senderismo, Relax...">
+                </div>
+            </div>
+            <button class="btn-search">
+                <span class="material-symbols-outlined">search</span>
+                Buscar
+            </button>
+        </div>
+    </section>
+
+    <section class="mobile-search-bar mobile-only">
+        <div class="mobile-search-container">
+            <div class="mobile-search-icon">
+                <span class="material-symbols-outlined">location_on</span>
+            </div>
+            <input type="text" placeholder="¿A dónde quieres ir?">
+            <div class="mobile-search-filter">
+                <span class="material-symbols-outlined">tune</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="header-text">
+                    <h2>Momentos Únicos</h2>
+                    <p>Experiencias seleccionadas para vivir lo mejor del Eje Cafetero.</p>
+                </div>
+                <a routerLink="/catalog" class="link-explore">
+                    Ver todos <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="catalog-grid">
+                <app-experience-card *ngFor="let exp of featuredExperiences" [experience]="exp"></app-experience-card>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <div class="glow-effect glow-top"></div>
+            <div class="glow-effect glow-bottom"></div>
+            <h2>Historias de viaje</h2>
+            <p>Suscríbete para recibir guías exclusivas y ofertas de temporada en tu correo.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<app-footer></app-footer>
+<app-bottom-nav></app-bottom-nav>

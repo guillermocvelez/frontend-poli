@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+<main class="detail-main mobile-optimized" *ngIf="experience">
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <div class="detail-hero-content">
+                <div class="location-badge">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <span>{{experience.location}}</span>
+                </div>
+                <h1>{{experience.title}}</h1>
+                <p>{{experience.description}}</p>
+                <div class="detail-hero-actions">
+                    <button class="btn-book">Reservar Ahora</button>
+                    <button class="btn-save">
+                        <span class="material-symbols-outlined">favorite</span>
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="detail-hero-image">
+            <img [src]="experience.image" [alt]="experience.title">
+            <div class="hero-image-overlay"></div>
+        </div>
+    </section>
+
+    <div class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-main-content">
+                <div class="detail-stats">
+                    <div class="stat-card">
+                        <span class="material-symbols-outlined">schedule</span>
+                        <p class="stat-label">Duración</p>
+                        <p class="stat-value">{{experience.duration}}</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-symbols-outlined">payments</span>
+                        <p class="stat-label">Precio</p>
+                        <p class="stat-value stat-price">{{experience.price}}</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-symbols-outlined">group</span>
+                        <p class="stat-label">Grupo</p>
+                        <p class="stat-value">Máx 12 pers.</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-symbols-outlined">language</span>
+                        <p class="stat-label">Idiomas</p>
+                        <p class="stat-value">ES, EN</p>
+                    </div>
+                </div>
+
+                <div class="detail-description">
+                    <h2>Sobre esta experiencia</h2>
+                    <p>{{experience.description}}</p>
+                    <p>Sumérgete en la cultura cafetera con guías locales expertos que te llevarán por los rincones más auténticos de la región.</p>
+                </div>
+            </div>
+
+            <aside class="detail-sidebar">
+                <div class="sidebar-sticky">
+                    <div class="contact-card">
+                        <h3>¿Tienes dudas?</h3>
+                        <div class="contact-options">
+                            <div class="contact-option">
+                                <span class="material-symbols-outlined">call</span>
+                                <span>+57 300 000 0000</span>
+                            </div>
+                            <div class="contact-option">
+                                <span class="material-symbols-outlined">mail</span>
+                                <span>hola&#64;veranttravel.com</span>
+                            </div>
+                        </div>
+                        <button class="btn-contact">Contactar Guía</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<div *ngIf="!experience" class="mobile-optimized" style="padding: 100px; text-align: center;">
+    <h2>Experiencia no encontrada</h2>
+    <a routerLink="/catalog">Volver al catálogo</a>
+</div>
+
+<app-footer></app-footer>
+<app-bottom-nav></app-bottom-nav>

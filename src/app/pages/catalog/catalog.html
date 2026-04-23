@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<main class="catalog-main-wrapper mobile-optimized">
+    <section class="page-header">
+        <div class="page-header-container">
+            <span class="page-header-label">Eje Cafetero, Colombia</span>
+            <h1>El Corazón del Café.</h1>
+            <p>Siente la magia de las montañas andinas. Desde valles de palmas gigantes hasta el aroma de los mejores granos de café del mundo.</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-pills">
+                <button class="filter-pill active">Todas</button>
+                <button class="filter-pill">Senderismo</button>
+                <button class="filter-pill">Cultura</button>
+                <button class="filter-pill">Relax</button>
+                <button class="filter-pill">Aventura</button>
+            </div>
+            
+            <div class="filter-actions">
+                <div class="filter-select-wrapper">
+                    <span class="material-symbols-outlined">filter_list</span>
+                    <select class="filter-select">
+                        <option>Ordenar por</option>
+                        <option>Más populares</option>
+                        <option>Precio: Menor a Mayor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="catalog-main">
+        <div class="catalog-grid">
+            <app-experience-card *ngFor="let exp of experiences" [experience]="exp"></app-experience-card>
+        </div>
+    </div>
+
+    <section class="pagination-section">
+        <button class="pagination-btn">
+            <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">
+            <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+    </section>
+</main>
+
+<app-footer></app-footer>
+<app-bottom-nav></app-bottom-nav>
