@@ -12,42 +12,46 @@
     <section class="filter-section">
         <div class="filter-container">
             <div class="filter-pills">
-                <button class="filter-pill active">Todas</button>
-                <button class="filter-pill">Senderismo</button>
-                <button class="filter-pill">Cultura</button>
-                <button class="filter-pill">Relax</button>
-                <button class="filter-pill">Aventura</button>
+                <button
+                    *ngFor="let cat of categories"
+                    class="filter-pill"
+                    [class.active]="activeCategory === cat"
+                    (click)="setCategory(cat)"
+                >{{ cat | titlecase }}</button>
             </div>
-            
+
             <div class="filter-actions">
                 <div class="filter-select-wrapper">
-                    <span class="material-symbols-outlined">filter_list</span>
-                    <select class="filter-select">
-                        <option>Ordenar por</option>
-                        <option>Más populares</option>
-                        <option>Precio: Menor a Mayor</option>
-                    </select>
+                    <span class="material-symbols-outlined">search</span>
+                    <input
+                        type="text"
+                        class="filter-search-input"
+                        placeholder="Buscar experiencia..."
+                        [(ngModel)]="searchText"
+                        (ngModelChange)="onSearchChange()"
+                    />
                 </div>
             </div>
         </div>
     </section>
 
     <div class="catalog-main">
-        <div class="catalog-grid">
-            <app-experience-card *ngFor="let exp of experiences" [experience]="exp"></app-experience-card>
+        <div class="catalog-grid" *ngIf="filteredExperiences.length > 0; else noResults">
+            <app-experience-card
+                *ngFor="let exp of filteredExperiences"
+                [experience]="exp"
+                [isFavorite]="isFavorite(exp.id)"
+                (favoriteToggled)="onFavoriteToggled($event)"
+            ></app-experience-card>
         </div>
+        <ng-template #noResults>
+            <div class="no-results">
+                <span class="material-symbols-outlined">search_off</span>
+                <p>No se encontraron experiencias para tu búsqueda.</p>
+                <button class="filter-pill active" (click)="setCategory('todas')">Ver todas</button>
+            </div>
+        </ng-template>
     </div>
-
-    <section class="pagination-section">
-        <button class="pagination-btn">
-            <span class="material-symbols-outlined">chevron_left</span>
-        </button>
-        <button class="pagination-btn active">1</button>
-        <button class="pagination-btn">2</button>
-        <button class="pagination-btn">
-            <span class="material-symbols-outlined">chevron_right</span>
-        </button>
-    </section>
 </main>
 
 <app-footer></app-footer>

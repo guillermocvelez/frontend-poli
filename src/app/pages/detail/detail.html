@@ -12,9 +12,13 @@
                 <p>{{experience.description}}</p>
                 <div class="detail-hero-actions">
                     <button class="btn-book">Reservar Ahora</button>
-                    <button class="btn-save">
-                        <span class="material-symbols-outlined">favorite</span>
-                        Guardar
+                    <button
+                        class="btn-save"
+                        [class.is-favorite]="isFavorite"
+                        (click)="toggleFavorite()"
+                    >
+                        <span class="material-symbols-outlined">{{ isFavorite ? 'favorite' : 'favorite_border' }}</span>
+                        {{ saveLabel }}
                     </button>
                 </div>
             </div>

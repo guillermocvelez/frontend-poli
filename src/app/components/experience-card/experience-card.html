@@ -2,6 +2,14 @@
     <div class="card-image">
         <img [src]="experience.image" [alt]="experience.title">
         <div class="card-badge" *ngIf="experience.badge">{{experience.badge}}</div>
+        <button
+            class="card-favorite-btn"
+            [class.is-favorite]="isFavorite"
+            (click)="onFavoriteClick($event)"
+            [attr.aria-label]="isFavorite ? 'Quitar de favoritos' : 'Guardar en favoritos'"
+        >
+            <span class="material-symbols-outlined">favorite</span>
+        </button>
     </div>
     <div class="card-content">
         <div class="card-header">

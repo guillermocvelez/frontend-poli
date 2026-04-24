@@ -6,7 +6,7 @@
             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP_LpDKgTUOBR2iQRGRAsbk_vef44aJqPGIaoyAn9aOy0ekly9qMQGtY7tO0TFzyn72at-PVW_R9SId4C4c1Mk1LiSaq4EcKlTAsZWMooJCfooXtwks8YzgeWND7uZJMFdkivlaB1fCpKlAzKB5w3Uld5WZnkcRSa_jPwRfXN-xzgohsbS1w9WgoE_B8zfI7hlnBdy8Af7r0Joomu23YJmUnXPX0fr1M32OcOmXGzDOEvEjlnd7jpwPzszJplrkZjW7E-nlf7zEVa1" alt="Valle del Cocora">
             <div class="about-hero-overlay"></div>
         </div>
-        
+
         <div class="about-hero-content">
             <div class="about-hero-text">
                 <span class="about-hero-badge">Nuestra Historia</span>
@@ -81,7 +81,7 @@
                 <div class="contact-info">
                     <h2>Contáctanos</h2>
                     <p class="contact-intro">¿Tienes alguna duda? Déjanos un mensaje y te responderemos lo antes posible.</p>
-                    
+
                     <div class="contact-details">
                         <div class="contact-detail-item">
                             <div class="contact-detail-icon">
@@ -96,20 +96,60 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
+                    <div class="form-success-msg" *ngIf="formSuccess">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        ¡Mensaje enviado! Te responderemos pronto.
+                    </div>
+
+                    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" placeholder="Tu nombre completo">
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Tu nombre completo"
+                                ngModel
+                                required
+                                minlength="2"
+                                #name="ngModel"
+                                [class.input-error]="formSubmitted && name.invalid"
+                            >
+                            <p class="form-error" *ngIf="formSubmitted && name.errors?.['required']">El nombre es obligatorio.</p>
+                            <p class="form-error" *ngIf="formSubmitted && name.errors?.['minlength']">Mínimo 2 caracteres.</p>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="tu@email.com">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                ngModel
+                                required
+                                email
+                                #emailField="ngModel"
+                                [class.input-error]="formSubmitted && emailField.invalid"
+                            >
+                            <p class="form-error" *ngIf="formSubmitted && emailField.errors?.['required']">El correo es obligatorio.</p>
+                            <p class="form-error" *ngIf="formSubmitted && emailField.errors?.['email']">Ingresa un correo válido.</p>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" placeholder="¿En qué podemos ayudarte?"></textarea>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="¿En qué podemos ayudarte?"
+                                ngModel
+                                required
+                                minlength="10"
+                                #msg="ngModel"
+                                [class.input-error]="formSubmitted && msg.invalid"
+                            ></textarea>
+                            <p class="form-error" *ngIf="formSubmitted && msg.errors?.['required']">El mensaje es obligatorio.</p>
+                            <p class="form-error" *ngIf="formSubmitted && msg.errors?.['minlength']">Mínimo 10 caracteres.</p>
                         </div>
 
                         <button type="submit" class="btn-submit">
