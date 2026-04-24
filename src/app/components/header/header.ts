@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
                     <a routerLink="/about" routerLinkActive="active">Nosotros</a>
                 </nav>
             </div>
-            
+
             <div class="navbar-actions">
                 <div class="search-box">
                     <span class="material-symbols-outlined">search</span>
@@ -33,7 +33,7 @@ import { RouterModule } from '@angular/router';
     <!-- Mobile Header -->
     <header class="mobile-header mobile-only">
         <div class="mobile-header-container">
-            <details class="mobile-menu-dropdown">
+            <details #mobileMenu class="mobile-menu-dropdown">
                 <summary class="mobile-menu-btn">
                     <span class="material-symbols-outlined">menu</span>
                 </summary>
@@ -67,8 +67,11 @@ import { RouterModule } from '@angular/router';
   `]
 })
 export class HeaderComponent {
+  @ViewChild('mobileMenu') mobileMenuRef?: ElementRef<HTMLDetailsElement>;
+
   closeMenu() {
-    const details = document.querySelector('details');
-    if (details) details.removeAttribute('open');
+    if (this.mobileMenuRef?.nativeElement) {
+      this.mobileMenuRef.nativeElement.removeAttribute('open');
+    }
   }
 }
